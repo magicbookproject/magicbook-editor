@@ -6,3 +6,11 @@
   line-height: 1.3em;
   font-size: 1.1em;
 }
+
+.MagicBookEditor h1 {
+  outline: none;
+}
+
+.MagicBookEditor h1::selection, .MagicBookEditor .Editor::selection {
+  background: #fff1ad;
+}

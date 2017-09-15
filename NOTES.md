@@ -10,4 +10,4 @@ GENERAL IDEA: Do all the editor important stuff first so I have an editor that I
 
 TODO:
 - [ ] Make document title editable
-- [ ] Add auto-save to localstorage
+- [ ] Convert to HTMLBook
