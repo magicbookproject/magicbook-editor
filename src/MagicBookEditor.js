@@ -6,6 +6,7 @@ import ContentEditable from "react-contenteditable";
 import isSoftNewlineEvent from 'draft-js/lib/isSoftNewlineEvent';
 import isListItem from './editor/isListItem';
 import insertBlockAfter from './editor/insertBlockAfter';
+import exportHtmlBook from './editor/exportHtmlBook';
 
 import {BLOCK_TYPE} from 'draft-js-utils';
 const LOCALSTORAGE_TITLE = 'magicbook-title';
@@ -32,6 +33,7 @@ class MagicBookEditor extends Component {
     this.handleReturn = this._handleReturn.bind(this);
     this.handleReturnSoftNewline = this._handleReturnSoftNewline.bind(this);
     this.handleReturnSpecialBlock = this._handleReturnSpecialBlock.bind(this);
+    this.exportHtmlBook = this._exportHtmlBook.bind(this);
   }
 
   componentDidMount() {
@@ -45,6 +47,7 @@ class MagicBookEditor extends Component {
     return (
       <div className="MagicBookEditor">
         <span className="saveState">{this.state.saveState}</span>
+        <button onClick={this.exportHtmlBook}>Export HTMLBook</button>
         <ContentEditable tagName="h1" html={this.state.editorTitle} onChange={this.onTitleChange} />
         <div className="Editor" onClick={this.focus}>
           <Editor
@@ -64,7 +67,7 @@ class MagicBookEditor extends Component {
     );
   }
 
-  // Load / Save
+  // Load / Save / Export
   // ------------------------------------------------------
 
   initialEditorTitle() {
@@ -108,6 +111,10 @@ class MagicBookEditor extends Component {
     if(this.saveTimer) clearTimeout(this.saveTimer);
     this.saveTimer = setTimeout(() => this.save(editorState), SAVE_TIMER);
     this.setState({editorState})
+  }
+
+  _exportHtmlBook() {
+    exportHtmlBook(this.state.editorTitle, this.state.editorState);
   }
 
   // Editor functions

@@ -13,10 +13,18 @@
   background: #fff1ad;
 }
 
-.MagicBookEditor .saveState {
+.MagicBookEditor .saveState, .MagicBookEditor button {
   color: #cecdcd;
   font-size: 0.9em;
 }
+
+ .MagicBookEditor button {
+   font-family: "Helvetica Neue", Helvetica, sans-serif;
+   background: none;
+   border: none;
+   margin-left: 10px;
+   outline: none;
+ }
 
 .Editor {
   line-height: 1.3em;
