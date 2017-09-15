@@ -1,0 +1,8 @@
+.MagicBookEditor {
+  margin-left: 20px;
+}
+
+.MagicBookEditor .Editor {
+  line-height: 1.3em;
+  font-size: 1.1em;
+}
