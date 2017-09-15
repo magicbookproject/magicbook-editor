@@ -1,5 +1,6 @@
 .MagicBookEditor {
   margin-left: 20px;
+  margin-top: 20px;
 }
 
 .MagicBookEditor .Editor {
@@ -9,8 +10,15 @@
 
 .MagicBookEditor h1 {
   outline: none;
+  margin-top: 0.5em;
+  margin-bottom: 0.4em;
 }
 
 .MagicBookEditor h1::selection, .MagicBookEditor .Editor::selection {
   background: #fff1ad;
+}
+
+.MagicBookEditor .saveState {
+  color: #cecdcd;
+  font-size: 0.9em;
 }

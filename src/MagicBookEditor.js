@@ -109,7 +109,7 @@ class MagicBookEditor extends Component {
 
     return (
       <div className="MagicBookEditor">
-        {this.state.saveState}
+        <span className="saveState">{this.state.saveState}</span>
         <ContentEditable tagName="h1" html={this.state.editorTitle} onChange={this.onTitleChange} />
         <div className="Editor" onClick={this.focus}>
           <Editor
