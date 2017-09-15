@@ -1,11 +1,6 @@
 .MagicBookEditor {
-  margin-left: 20px;
+  margin-left: 40px;
   margin-top: 20px;
-}
-
-.MagicBookEditor .Editor {
-  line-height: 1.3em;
-  font-size: 1.1em;
 }
 
 .MagicBookEditor h1 {
@@ -21,4 +16,13 @@
 .MagicBookEditor .saveState {
   color: #cecdcd;
   font-size: 0.9em;
+}
+
+.Editor {
+  line-height: 1.3em;
+  font-size: 1.1em;
+}
+
+.Editor .paragraph {
+  margin: 14px 0;
 }
